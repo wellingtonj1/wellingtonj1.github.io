@@ -9,17 +9,17 @@ const projects = [
 
 export default function ProjectsPage() {
     return (
-        <section className="py-16">
-            <h3 className="text-2xl font-bold mb-4">Projetos</h3>
-            <ul className="mt-4 space-y-4">
+        <section className="py-16 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
+            <h3 className="text-2xl font-bold mb-4 text-center">Projetos</h3>
+            <ul className="mt-4 space-y-4 max-w-3xl mx-auto">
                 {projects.map((project, index) => (
-                    <li key={index}>
+                    <li key={index} className="p-4 bg-white bg-opacity-20 rounded-lg shadow-md">
                         <h4 className="text-xl font-semibold">
-                            <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                            <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-yellow-300 hover:underline">
                                 {project.name}
                             </a>
                         </h4>
-                        <p className="text-lg text-gray-700">{project.description}</p>
+                        <p className="text-lg">{project.description}</p>
                     </li>
                 ))}
             </ul>
